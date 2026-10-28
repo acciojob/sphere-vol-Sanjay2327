@@ -5,8 +5,7 @@ let submit = document.getElementById("submit")
 
 function volume_sphere() {
     //Write your code here
-    let radius1 = parseInt(radius.value).toFixed(4) ;
-     volume.textContent = "result " + (4/3) * Math.PI * Math.pow(radius1,3)
+     volume.value = parseInt((4/3) * Math.PI * Math.pow(radius.value,3)).toFixed(4)
   
 } 
 document.getElementById("submit").addEventListener("click" ,volume_sphere ) ;
