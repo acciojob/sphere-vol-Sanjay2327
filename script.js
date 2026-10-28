@@ -5,11 +5,16 @@ let submit = document.getElementById("submit")
 
 function volume_sphere() {
     //Write your code here
-      if(radius.value === String || radius.value < 0 ) {
-        return NaN;
-    }else {
-        return volume.value = parseInt((4 / 3) * Math.PI * Math.pow(radius.value, 3)).toFixed(4)
-    }
+        let r = Number(radius.value) ;
+
+   if(radius.value.trim() === "" || isNaN(r) || r < 0){
+    volume.value = "NaN";
+   }; 
+
+   let  result = (4 / 3) * Math.PI * Math.pow(r , 3)
+    volume.value = result.toFixed(4) ;
+
+    return volume.value ;
 } 
 document.getElementById("submit").addEventListener("click" ,volume_sphere ) ;
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
